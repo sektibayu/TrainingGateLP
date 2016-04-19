@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCourse extends Migration
+class CreateCoursesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateCourse extends Migration
      */
     public function up()
     {
-        Schema::create('course', function (Blueprint $table) {
+        Schema::create('courses', function (Blueprint $table) {
             $table->increments('section_id');
             $table->string('nama_section')->unique();
             $table->integer('course_course_id');
@@ -29,6 +29,6 @@ class CreateCourse extends Migration
      */
     public function down()
     {
-        schema::drop('course');
+        Schema::drop('courses');
     }
 }

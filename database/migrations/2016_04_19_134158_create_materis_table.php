@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFinishedSection extends Migration
+class CreateMaterisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,9 @@ class CreateFinishedSection extends Migration
      */
     public function up()
     {
-        Schema::create('finished_section', function (Blueprint $table) {
-            $table->integer('section_id_section');
-            $table0>integer('user_user_id');
+        Schema::create('materis', function (Blueprint $table) {
+            $table->increments('materi_id');
+            $table->varchar('nama_file');
         });
     }
 
@@ -25,6 +25,6 @@ class CreateFinishedSection extends Migration
      */
     public function down()
     {
-        Schema::drop('finished_section');
+        Schema::drop('materis');
     }
 }

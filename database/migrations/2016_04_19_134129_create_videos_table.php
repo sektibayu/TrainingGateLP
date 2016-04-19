@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVideo extends Migration
+class CreateVideosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateVideo extends Migration
      */
     public function up()
     {
-        Schema::create('video', function (Blueprint $table) {
+        Schema::create('videos', function (Blueprint $table) {
             $table->increments('video_id');
             $table->binary('video');
         });
@@ -25,6 +25,6 @@ class CreateVideo extends Migration
      */
     public function down()
     {
-        schema::drop('video');
+        Schema::drop('videos');
     }
 }

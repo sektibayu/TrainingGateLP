@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSoal extends Migration
+class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,12 @@ class CreateSoal extends Migration
      */
     public function up()
     {
-        Schema::create('soal', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->increments('user_id');
-            $table->string('judul_soal');
-            $table->string('deskripsi_soal');
-            
+            $table->string('username')->unique();
+            $table->string('password');
+            $table->integer('role_role_id');
+            $table->rememberToken();
         });
     }
 
@@ -27,6 +28,6 @@ class CreateSoal extends Migration
      */
     public function down()
     {
-        schema::drop('soal');
+        Schema::drop('users');
     }
 }

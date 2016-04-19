@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMateri extends Migration
+class CreateRolesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,9 @@ class CreateMateri extends Migration
      */
     public function up()
     {
-        Schema::create('materi', function (Blueprint $table) {
-            $table->increments('materi_id');
-            $table->varchar('nama_file');
+        Schema::create('roles', function (Blueprint $table) {
+            $table->increments('role_id');
+            $table->string('rolename');
         });
     }
 
@@ -25,6 +25,6 @@ class CreateMateri extends Migration
      */
     public function down()
     {
-        schema::drop('materi');
+        Schema::drop('roles');
     }
 }

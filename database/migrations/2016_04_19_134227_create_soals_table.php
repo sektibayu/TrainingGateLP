@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUser extends Migration
+class CreateSoalsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,10 @@ class CreateUser extends Migration
      */
     public function up()
     {
-        Schema::create('user', function (Blueprint $table) {
+        Schema::create('soals', function (Blueprint $table) {
             $table->increments('user_id');
-            $table->string('username')->unique();
-            $table->string('password');
-            $table->integer('role_role_id');
-            $table->rememberToken();
+            $table->string('judul_soal');
+            $table->string('deskripsi_soal');
         });
     }
 
@@ -28,6 +26,6 @@ class CreateUser extends Migration
      */
     public function down()
     {
-        chema::drop('user');
+        Schema::drop('soals');
     }
 }
