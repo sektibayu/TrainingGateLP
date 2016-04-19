@@ -13,12 +13,8 @@ class CreateCoursesTable extends Migration
     public function up()
     {
         Schema::create('courses', function (Blueprint $table) {
-            $table->increments('section_id');
-            $table->string('nama_section')->unique();
-            $table->integer('course_course_id');
-            $table->integer('video_id_video');
-            $table->integer('materi_id_materi');
-            $table->integer('soal_soal_id');
+            $table->increments('course_id');
+            $table->string('nama_course');
         });
     }
 
