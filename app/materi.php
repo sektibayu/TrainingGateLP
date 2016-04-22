@@ -6,9 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class materi extends Model
 {
-    protected $primaryKey='id_materi';
+    protected $primaryKey='materi_id';
     public $timestamps=false;
     protected $fillable =[
-    'nama_file'
+    'alamat_materi'
     ];
+    public function section(){
+    	return $this->hasMany('App\section','materi_materi_id','materi_id');
+    }
 }

@@ -12,4 +12,7 @@ class soal extends Model
     'judul_soal',
     'deskripsi_soal'
     ];
+    public function section(){
+    	return $this->hasMany('App\section','soal_soal_id','soal_id');
+    }
 }

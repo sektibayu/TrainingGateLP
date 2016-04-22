@@ -14,7 +14,8 @@ class CreateMaterisTable extends Migration
     {
         Schema::create('materis', function (Blueprint $table) {
             $table->increments('materi_id');
-            $table->varchar('nama_file');
+            $table->varchar('nama_materi');
+            $table->varchar('alamat_materi');
         });
     }
 

@@ -12,4 +12,7 @@ class course extends Model
     'nama_course'
     ];
 
+    public function section(){
+    	return $this->hasMany('App\section','course_course_id','course_id');
+    }
 }

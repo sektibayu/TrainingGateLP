@@ -39,7 +39,8 @@
         <div class="container">
             <div class="content">
                 <div class="title">Laravel 5</div>
-            </div>
+                <div>{{public_path('pic1.png')}}
+            <!-- <img src="{{asset('pic1.png')}}" alt="coba" style="width:100px;height:100px"> -->
         </div>
     </body>
 </html>

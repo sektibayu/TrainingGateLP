@@ -13,7 +13,7 @@ class CreateFinishedSectionsTable extends Migration
     public function up()
     {
         Schema::create('finished_sections', function (Blueprint $table) {
-            $table->integer('section_id_section');
+            $table->integer('section_section_id');
             $table->integer('user_user_id');
         });
     }

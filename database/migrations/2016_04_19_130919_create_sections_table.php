@@ -16,8 +16,8 @@ class CreateSectionsTable extends Migration
             $table->increments('section_id');
             $table->string('nama_section')->unique();
             $table->integer('course_course_id');
-            $table->integer('video_id_video');
-            $table->integer('materi_id_materi');
+            $table->integer('video_video_id');
+            $table->integer('materi_materi_id');
             $table->integer('soal_soal_id');
         });
     }
