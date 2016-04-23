@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class course extends Model
+class Course extends Model
 {
     protected $primaryKey='course_id';
     public $timestamps=false;
@@ -13,6 +13,7 @@ class course extends Model
     ];
 
     public function section(){
-    	return $this->hasMany('App\section','course_course_id','course_id');
+    	return $this->hasMany('App\Section','course_course_id','course_id');
     }
+
 }

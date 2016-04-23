@@ -14,21 +14,16 @@
 			<div class="login-panel panel panel-default">
 				<div class="panel-heading">LP Training Gate</div>
 				<div class="panel-body">
-					<form role="form">
-						<fieldset>
+					<form role="form" method="post" action="{{route('login')}}" >
+            			{!! csrf_field() !!}
 							<div class="form-group">
-								<input class="form-control" placeholder="NRP" name="nrp" type="text" autofocus="">
+								<input class="form-control" placeholder="username" name="username" type="text" autofocus="">
 							</div>
 							<div class="form-group">
 								<input class="form-control" placeholder="Password" name="password" type="password" value="">
 							</div>
-							<div class="checkbox">
-								<label>
-									<input name="remember" type="checkbox" value="Remember Me">Remember Me
-								</label>
-							</div>
-							<a href="index.html" class="btn btn-primary">Login</a>
-						</fieldset>
+							<button type="submit" class="btn btn-primary">Login</button>
+			
 					</form>
 				</div>
 			</div>

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class section extends Model
+class Section extends Model
 {
     protected $primaryKey='section_id';
     public $timestamps=false;
@@ -16,22 +16,22 @@ class section extends Model
     'soal_soal_id'
     ];
 
-    public function course(){
-    	return $this->belongTo('App/course','course_course_id','course_id');
+    public function Course(){
+    	return $this->belongTo('App/Course','course_course_id','course_id');
     }
 
-    public function video(){
-        return $this->belongTo('App/video','video_video_id','video_id');
+    public function Video(){
+        return $this->belongTo('App/Video','video_video_id','video_id');
     }
 
-    public function materi(){
-        return $this->belongTo('App/materi','materi_materi_id','materi_id');
+    public function Materi(){
+        return $this->belongTo('App/Materi','materi_materi_id','materi_id');
     }
-    public function soal(){
-        return $this->belongTo('App/soal','soal_soal_id','soal_id');
+    public function Soal(){
+        return $this->belongTo('App/Soal','soal_soal_id','soal_id');
     }
 
-    public function course(){
-        return $this->belongToMany('App/user');
+    public function User(){
+        return $this->belongsToMany('App\User','finished_sections','section_section_id','user_user_id');
     }
 }

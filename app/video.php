@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class video extends Model
+class Video extends Model
 {
     protected $primaryKey='video_id';
     public $timestamps=false;
@@ -12,7 +12,7 @@ class video extends Model
     'alamat_video'
     ];
 
-    public function section(){
-    	return $this->hasMany('App\section','video_video_id','video_id');
+    public function Section(){
+    	return $this->hasMany('App\Section','video_video_id','video_id');
     }
 }

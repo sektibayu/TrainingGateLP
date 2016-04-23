@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class soal extends Model
+class Soal extends Model
 {
     protected $primaryKey='user_id';
     public $timestamps=false;
@@ -12,7 +12,7 @@ class soal extends Model
     'judul_soal',
     'deskripsi_soal'
     ];
-    public function section(){
-    	return $this->hasMany('App\section','soal_soal_id','soal_id');
+    public function Section(){
+    	return $this->hasMany('App\Section','soal_soal_id','soal_id');
     }
 }

@@ -6,7 +6,27 @@
         <ul class="children collapse" id="sub-item-1">
             <li>
                 <a class="" href="#">
-                    <svg class="glyph stroked male user "><use xlink:href="#stroked-male-user"/></svg> Users
+                    <svg class="glyph stroked male user "><use xlink:href="#stroked-male-user"/></svg> Manage Users
+                </a>
+            </li>
+            <li>
+                <a class="" href="#">
+                    <svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Manage Course
+                </a>
+            </li>
+            <li>
+                <a class="" href="#">
+                    <svg class="glyph stroked clipboard with paper"><use xlink:href="#stroked-clipboard-with-paper"/></svg> Manage Materi
+                </a>
+            </li>
+            <li>
+                <a class="" href="#">
+                    <svg class="glyph stroked video"><use xlink:href="#stroked-video"/></svg></svg> Manage Video
+                </a>
+            </li>
+            <li>
+                <a class="" href="#">
+                    <svg class="glyph stroked blank document"><use xlink:href="#stroked-blank-document"/></svg> Manage Soal
                 </a>
             </li>
             <li>
@@ -17,13 +37,8 @@
         </ul>
     </li>
     <li role="presentation" class="divider"></li>
-    <li class="active"><a href="index.html"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Dashboard</a></li>
-    <li><a href="widgets.html"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Widgets</a></li>
-    <li><a href="charts.html"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Charts</a></li>
-    <li><a href="tables.html"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Tables</a></li>
-    <li><a href="forms.html"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Forms</a></li>
-    <li><a href="panels.html"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Alerts &amp; Panels</a></li>
-    <li><a href="icons.html"><svg class="glyph stroked star"><use xlink:href="#stroked-star"></use></svg> Icons</a></li>
+    <li class="active"><a href="#"><svg class="glyph stroked flag"><use xlink:href="#stroked-flag"/></svg></use></svg>Course</a></li>
+    <li><a href="#"><svg class="glyph stroked open folder"><use xlink:href="#stroked-open-folder"/></svg></svg>Bundel Soal</a></li>
     <li role="presentation" class="divider"></li>
     <li><a class="" href="#"> Contributor: </a></li>
     <li><a class="" href="#"> <svg class="glyph stroked male user "><use xlink:href="#stroked-male-user"/></svg> Bayu </a></li>

@@ -14,8 +14,8 @@ class CreateVideosTable extends Migration
     {
         Schema::create('videos', function (Blueprint $table) {
             $table->increments('video_id');
-            $table->varchar('nama_video');
-            $table->varchar('alamat_video');
+            $table->string('nama_video');
+            $table->string('alamat_video');
         });
     }
 

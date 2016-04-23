@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class role extends Model
+class Role extends Model
 {
     protected $primaryKey='role_id';
     public $timestamps=false;
@@ -12,6 +12,6 @@ class role extends Model
     'rolename'
     ];
     public function user(){
-    	return $this->hasMany('App\user','role_role_id','role_id');
+    	return $this->hasMany('App\User','role_role_id','role_id');
     }
 }
