@@ -37,7 +37,7 @@
         </ul>
     </li>
     <li role="presentation" class="divider"></li>
-    <li class="active"><a href="#"><svg class="glyph stroked flag"><use xlink:href="#stroked-flag"/></svg></use></svg>Course</a></li>
+    <li class=""><a href="#"><svg class="glyph stroked flag"><use xlink:href="#stroked-flag"/></svg></use></svg>Course</a></li>
     <li><a href="#"><svg class="glyph stroked open folder"><use xlink:href="#stroked-open-folder"/></svg></svg>Bundel Soal</a></li>
     <li role="presentation" class="divider"></li>
     <li><a class="" href="#"> Contributor: </a></li>
