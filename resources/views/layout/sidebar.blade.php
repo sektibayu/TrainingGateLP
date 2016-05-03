@@ -5,7 +5,7 @@
         </a>
         <ul class="children collapse" id="sub-item-1">
             <li>
-                <a class="" href="#">
+                <a class="" href="{{ URL::to('user') }}">
                     <svg class="glyph stroked male user "><use xlink:href="#stroked-male-user"/></svg> Manage Users
                 </a>
             </li>
@@ -15,7 +15,7 @@
                 </a>
             </li>
             <li>
-                <a class="" href="#">
+                <a class="" href="{{ URL::to('materi') }}">
                     <svg class="glyph stroked clipboard with paper"><use xlink:href="#stroked-clipboard-with-paper"/></svg> Manage Materi
                 </a>
             </li>
@@ -25,7 +25,7 @@
                 </a>
             </li>
             <li>
-                <a class="" href="#">
+                <a class="" href="{{ URL::to('soal') }}">
                     <svg class="glyph stroked blank document"><use xlink:href="#stroked-blank-document"/></svg> Manage Soal
                 </a>
             </li>

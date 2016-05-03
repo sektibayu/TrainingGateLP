@@ -9,6 +9,7 @@ class Materi extends Model
     protected $primaryKey='materi_id';
     public $timestamps=false;
     protected $fillable =[
+    'nama_materi',
     'alamat_materi'
     ];
     public function section(){
