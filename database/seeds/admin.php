@@ -14,7 +14,7 @@ class admin extends Seeder
     {
     	DB::table('users')->delete();
         $admin = new User;
-        $admin->userid = '1';
+        // $admin->userid = '1';
         $admin->username = 'admin';
         $admin->password = 'admin';
         $admin->password = bcrypt($admin->password);

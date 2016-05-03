@@ -52,6 +52,7 @@ Route::group(['middleware' => ['web']], function(){
 	Route::post('user/update/{id}', array(
 		'before' => 'csrf',
 		'uses' => 'UserController@update',
+		'middleware' => 'auth'
 		));
 
 	Route::get('user/delete/{id}', array(
@@ -89,4 +90,26 @@ Route::group(['middleware' => ['web']], function(){
 		'uses'=>'CourseController@delete',
 		'middleware' => 'auth'
 		));	
+
+	Route::get('materi', array(
+		'uses' => 'MateriController@index',
+		'middleware' => 'auth'
+		));
+	Route::post('materi/upload', array(
+		'before' => 'csrf',
+		'uses' => 'MateriController@upload',
+		'middleware' => 'auth'
+		));
+	Route::get('materi/delete/{id}', array(
+		'uses'=>'MateriController@delete',
+		'middleware' => 'auth'
+		));
+	Route::get('soal', array(
+		'uses' => 'SoalController@index',
+		'middleware' => 'auth'
+		));
+	Route::get('soal/create', array(
+		'uses'=>'soalController@create',
+		'middleware' => 'auth'
+		));
 });
