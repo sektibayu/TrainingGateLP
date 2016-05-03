@@ -5,12 +5,12 @@
         </a>
         <ul class="children collapse" id="sub-item-1">
             <li>
-                <a class="" href="#">
+                <a class="" href="{{ URL::to('user') }}">
                     <svg class="glyph stroked male user "><use xlink:href="#stroked-male-user"/></svg> Manage Users
                 </a>
             </li>
             <li>
-                <a class="" href="#">
+                <a class="" href="{{ URL::to('course') }}">
                     <svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Manage Course
                 </a>
             </li>

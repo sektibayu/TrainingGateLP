@@ -32,6 +32,7 @@ Route::group(['middleware' => ['web']], function(){
 		'middleware' => 'auth'
 		));
 
+	
 	Route::get('user/create', array(
 		'uses'=>'UserController@create',
 		'middleware' => 'auth'
@@ -55,6 +56,37 @@ Route::group(['middleware' => ['web']], function(){
 
 	Route::get('user/delete/{id}', array(
 		'uses'=>'UserController@delete',
+		'middleware' => 'auth'
+		));	
+
+	Route::get('course', array(
+		'uses' => 'CourseController@index',
+		'middleware' => 'auth'
+		));
+
+	Route::get('course/create', array(
+		'uses'=>'CourseController@create',
+		'middleware' => 'auth'
+		));
+
+	Route::post('course/create', array(
+		'before' => 'csrf', 
+		'uses' => 'CourseController@create',
+		'middleware' => 'auth'
+		));
+
+	Route::get ('course/update/{id}', array(
+		'uses'=>'CourseController@update',
+		'middleware' => 'auth'
+		));
+
+	Route::post('course/update/{id}', array(
+		'before' => 'csrf',
+		'uses' => 'CourseController@update',
+		));
+
+	Route::get('course/delete/{id}', array(
+		'uses'=>'CourseController@delete',
 		'middleware' => 'auth'
 		));	
 });

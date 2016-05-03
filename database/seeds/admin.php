@@ -12,7 +12,7 @@ class admin extends Seeder
      */
     public function run()
     {
-    	// DB::table('users')->delete();
+    	DB::table('users')->delete();
         $admin = new User;
         $admin->userid = '1';
         $admin->username = 'admin';
