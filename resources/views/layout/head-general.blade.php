@@ -10,4 +10,4 @@
 <link href="{{asset('css/bootstrap-table.css')}}" rel="stylesheet">
 <link href="{{asset('css/styles.css')}}" rel="stylesheet">
 <!-- <script src="{{asset('js/tinymce.min.js')}}"></script> -->
-<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<!-- <script src="//cdn.tinymce.com/4/tinymce.min.js"></script> -->

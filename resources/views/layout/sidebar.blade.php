@@ -20,7 +20,7 @@
                 </a>
             </li>
             <li>
-                <a class="" href="#">
+                <a class="" href="{{ URL::to('video') }}">
                     <svg class="glyph stroked video"><use xlink:href="#stroked-video"/></svg></svg> Manage Video
                 </a>
             </li>
