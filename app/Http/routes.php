@@ -112,4 +112,8 @@ Route::group(['middleware' => ['web']], function(){
 		'uses'=>'soalController@create',
 		'middleware' => 'auth'
 		));
+	Route::get('courseuser', array(
+		'uses' => 'CourseUserController@index',
+		'middleware' => 'auth'
+		));
 });

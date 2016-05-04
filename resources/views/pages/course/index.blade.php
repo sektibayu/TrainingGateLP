@@ -37,7 +37,7 @@
                                                     <h4 class="modal-title" id="myModalLabel">Hapus course</h4>
                                                 </div>
                                                 <div class="modal-body">
-                                                    Apakah anda yakin menghapus course {{$course->coursename}}? <br><br><br> klik "Ya" untuk konfirmasi
+                                                    Apakah anda yakin menghapus course {{$course->nama_course}}? <br><br><br> klik "Ya" untuk konfirmasi
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
