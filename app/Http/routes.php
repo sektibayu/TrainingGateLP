@@ -116,4 +116,17 @@ Route::group(['middleware' => ['web']], function(){
 		'uses' => 'CourseUserController@index',
 		'middleware' => 'auth'
 		));
+	Route::get('video', array(
+		'uses' => 'VideoController@index',
+		'middleware' => 'auth'
+		));
+	Route::post('video/upload', array(
+		'before' => 'csrf',
+		'uses' => 'VideoController@upload',
+		'middleware' => 'auth'
+		));
+	Route::get('video/delete/{id}', array(
+		'uses'=>'VideoController@delete',
+		'middleware' => 'auth'
+		));
 });
