@@ -129,4 +129,8 @@ Route::group(['middleware' => ['web']], function(){
 		'uses'=>'VideoController@delete',
 		'middleware' => 'auth'
 		));
+	Route::get('bundle', array(
+		'uses' => 'BundleController@index',
+		'middleware' => 'auth'
+		));
 });
