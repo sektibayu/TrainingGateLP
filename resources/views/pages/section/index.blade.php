@@ -1,13 +1,13 @@
 @extends('layout.master')
 
-@section('title','Database Courses')
+@section('title','Database Sections')
 
 @section('content')
     <div class="row">
 			<div class="col-lg-12">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<a href="{{ URL::to('course/create') }}" class="btn btn-primary" title="Tambah"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Tambah Course</a>
+						<a href="{{ URL::to('section/create') }}" class="btn btn-primary" title="Tambah"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Tambah Section</a>
 					</div>
 					<div class="panel-body">
 
@@ -15,33 +15,41 @@
 						    <thead>
 						    <tr>
 						        <!-- <th data-field="state" data-checkbox="true" >Item ID</th> -->
-						        <th class="text-center" data-sortable="true">Course ID</th>
-						        <th class="text-center" data-sortable="true">Course Name</th>
+						        <th class="text-center" data-sortable="true">Section ID</th>
+						        <th class="text-center" data-sortable="true">Section Name</th>
+						        <th class="text-center" data-sortable="true">Course</th>
+						        <th class="text-center" data-sortable="true">Video</th>
+						        <th class="text-center" data-sortable="true">Materi</th>
+						        <th class="text-center" data-sortable="true">Soal</th>
 						        <th class="text-center" data-sortable="true">Aksi</th>
 						    </tr>
 						    </thead>
 						    <tbody>
-						   	@foreach($courses as $course)
+						   	@foreach($sections as $section)
 						    <tr>
-						    	<td>{{$course->course_id}}</td>
-						    	<td>{{$course->nama_course}}</td>
+						    	<td>{{$section->section_id}}</td>
+						    	<td>{{$section->nama_section}}</td>
+						    	<td>{{$section->course_course_id}}</td>
+						    	<td>{{$section->video_video_id}}</td>
+						    	<td>{{$section->materi_materi_id}}</td>
+						    	<td>{{$section->soal_soal_id}}</td>
 						    	<td>
-						    		<a href="{{ URL::to('course/update/' . $course->course_id) }}" class="btn btn-primary btn-xs"title="Sunting"><span class="glyphicon glyphicon-pencil"></span></a>
-                                    <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal{{$course->course_id}}"><span class="glyphicon glyphicon-remove"></span></button>
+						    		<a href="{{ URL::to('section/update/' . $section->section_id) }}" class="btn btn-primary btn-xs"title="Sunting"><span class="glyphicon glyphicon-pencil"></span></a>
+                                    <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal{{$section->section_id}}"><span class="glyphicon glyphicon-remove"></span></button>
                                     <!-- Modal -->
-                                    <div class="modal fade" id="modal{{$course->course_id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="modal{{$section->section_id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                                    <h4 class="modal-title" id="myModalLabel">Hapus course</h4>
+                                                    <h4 class="modal-title" id="myModalLabel">Hapus section</h4>
                                                 </div>
                                                 <div class="modal-body">
-                                                    Apakah anda yakin menghapus course {{$course->nama_course}}? <br><br><br> klik "Ya" untuk konfirmasi
+                                                    Apakah anda yakin menghapus section {{$section->section_section}}? <br><br><br> klik "Ya" untuk konfirmasi
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                                <a href="{{ URL::to('course/delete/'.$course->course_id) }}">
+                                                <a href="{{ URL::to('section/delete/'.$section->section_id) }}">
                                                     <button type="button" class="btn btn-danger">Ya</button>
                                                 </a>
                                                 </div>

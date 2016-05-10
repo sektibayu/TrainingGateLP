@@ -133,4 +133,34 @@ Route::group(['middleware' => ['web']], function(){
 		'uses' => 'BundleController@index',
 		'middleware' => 'auth'
 		));
+	Route::get('section', array(
+		'uses' => 'SectionController@index',
+		'middleware' => 'auth'
+		));
+
+	Route::get('section/create', array(
+		'uses'=>'SectionController@create',
+		'middleware' => 'auth'
+		));
+
+	Route::post('section/create', array(
+		'before' => 'csrf', 
+		'uses' => 'SectionController@create',
+		'middleware' => 'auth'
+		));
+
+	Route::get ('section/update/{id}', array(
+		'uses'=>'SectionController@update',
+		'middleware' => 'auth'
+		));
+
+	Route::post('section/update/{id}', array(
+		'before' => 'csrf',
+		'uses' => 'SectionController@update',
+		));
+
+	Route::get('section/delete/{id}', array(
+		'uses'=>'SectionController@delete',
+		'middleware' => 'auth'
+		));
 });

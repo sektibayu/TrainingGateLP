@@ -10,6 +10,11 @@
                 </a>
             </li>
             <li>
+                <a class="" href="{{ URL::to('section') }}">
+                    <svg class="glyph stroked male user "><use xlink:href="#stroked-male-user"/></svg> Manage Section
+                </a>
+            </li>
+            <li>
                 <a class="" href="{{ URL::to('course') }}">
                     <svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Manage Course
                 </a>
@@ -38,7 +43,7 @@
     </li>
     <li role="presentation" class="divider"></li>
     <li class=""><a href="{{ URL::to('courseuser') }}"><svg class="glyph stroked flag"><use xlink:href="#stroked-flag"/></svg></use></svg>Course</a></li>
-    <li><a href="#"><svg class="glyph stroked open folder"><use xlink:href="#stroked-open-folder"/></svg></svg>Bundel Soal</a></li>
+    <li><a href="{{ URL::to('bundle') }}"><svg class="glyph stroked open folder"><use xlink:href="#stroked-open-folder"/></svg></svg>Bundel Soal</a></li>
     <li role="presentation" class="divider"></li>
     <li><a class="" href="#"> Contributor: </a></li>
     <li><a class="" href="#"> <svg class="glyph stroked male user "><use xlink:href="#stroked-male-user"/></svg> Bayu </a></li>
