@@ -7,14 +7,14 @@
 
 </head>
 
-<body style="background-image: url({{asset('img/bglogin.jpg')}});">
+<body style="background-image: url({{asset('img/bglogin.jpg')}}); background-size:cover; background-position=center;" >
 	<div class="row">
 		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
 			<div class="login-panel panel panel-default" style="opacity: 0.9;">
 				<div class="panel-heading"><center>LP Training Gate</center></div>
 				<div class="panel-body">
 					<div class="col-sm-4">
-					<img src="{{asset('img/logolp.jpg')}}" style="width:150px;height:150px;">
+					<img src="{{asset('img/logolp.jpg')}}" style="width:120%;height:120%;">
 					</div>
 					<div class="col-sm-8">
 						<form role="form" method="post" action="{{route('login')}}" >
