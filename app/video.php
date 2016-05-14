@@ -9,6 +9,7 @@ class Video extends Model
     protected $primaryKey='video_id';
     public $timestamps=false;
     protected $fillable =[
+    'nama_video',
     'alamat_video'
     ];
 

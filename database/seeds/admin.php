@@ -17,6 +17,7 @@ class admin extends Seeder
         // $admin->userid = '1';
         $admin->username = 'admin';
         $admin->password = 'admin';
+        $admin->role_role_id = '1';
         $admin->password = bcrypt($admin->password);
         $admin->save();
     }

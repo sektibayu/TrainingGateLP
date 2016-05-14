@@ -1,4 +1,5 @@
 <ul class="nav menu">
+    @if(Auth::user()->role_role_id === 1)
     <li class="parent ">
         <a href="#">
             <span data-toggle="collapse" href="#sub-item-1"><svg class="glyph stroked chevron down"><use xlink:href="#stroked-chevron-down"/></svg><svg class="glyph stroked gear"><use xlink:href="#stroked-gear"></use></svg> Admin </span>
@@ -41,6 +42,7 @@
             </li>
         </ul>
     </li>
+    @endif
     <li role="presentation" class="divider"></li>
     <li class=""><a href="{{ URL::to('courseuser') }}"><svg class="glyph stroked flag"><use xlink:href="#stroked-flag"/></svg></use></svg>Course</a></li>
     <li><a href="{{ URL::to('bundle') }}"><svg class="glyph stroked open folder"><use xlink:href="#stroked-open-folder"/></svg></svg>Bundel Soal</a></li>

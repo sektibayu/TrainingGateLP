@@ -9,7 +9,8 @@ class Course extends Model
     protected $primaryKey='course_id';
     public $timestamps=false;
     protected $fillable =[
-    'nama_course'
+    'nama_course',
+    'deskripsi_course'
     ];
 
     public function section(){

@@ -10,7 +10,7 @@
 
 </head>
 
-<body>
+<body >
     @include('layout.navbar')
         
     <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">

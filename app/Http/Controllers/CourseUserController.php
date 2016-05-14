@@ -12,5 +12,5 @@ class CourseUserController extends Controller
     	$share = array();
     	$share['courses'] = Course::get();
         return view('pages.course_user.index', $share);
-    }
+    } 
 }

@@ -17,18 +17,18 @@ class Section extends Model
     ];
 
     public function Course(){
-    	return $this->belongsTo('App/Course','course_course_id','course_id');
+    	return $this->belongsTo('App\Course','course_course_id','course_id');
     }
 
     public function Video(){
-        return $this->belongsTo('App/Video','video_video_id','video_id');
+        return $this->belongsTo('App\Video','video_video_id','video_id');
     }
 
     public function Materi(){
-        return $this->belongsTo('App/Materi','materi_materi_id','materi_id');
+        return $this->belongsTo('App\Materi','materi_materi_id','materi_id');
     }
     public function Soal(){
-        return $this->belongsTo('App/Soal','soal_soal_id','soal_id');
+        return $this->belongsTo('App\Soal','soal_soal_id','soal_id');
     }
 
     public function User(){

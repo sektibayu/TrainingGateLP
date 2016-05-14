@@ -17,6 +17,7 @@
 						        <!-- <th data-field="state" data-checkbox="true" >Item ID</th> -->
 						        <th class="text-center" data-sortable="true">Course ID</th>
 						        <th class="text-center" data-sortable="true">Course Name</th>
+						        <th class='text-center' date-sortable="true">Deskripsi</th>
 						        <th class="text-center" data-sortable="true">Aksi</th>
 						    </tr>
 						    </thead>
@@ -25,6 +26,7 @@
 						    <tr>
 						    	<td>{{$course->course_id}}</td>
 						    	<td>{{$course->nama_course}}</td>
+						    	<td>{{$course->deskripsi_course}}</td>
 						    	<td>
 						    		<a href="{{ URL::to('course/update/' . $course->course_id) }}" class="btn btn-primary btn-xs"title="Sunting"><span class="glyphicon glyphicon-pencil"></span></a>
                                     <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal{{$course->course_id}}"><span class="glyphicon glyphicon-remove"></span></button>

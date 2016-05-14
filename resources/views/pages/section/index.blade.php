@@ -29,7 +29,7 @@
 						    <tr>
 						    	<td>{{$section->section_id}}</td>
 						    	<td>{{$section->nama_section}}</td>
-						    	<td>{{$section->course_course_id}}</td>
+						    	<td>{{$section->Course->nama_course}}</td>
 						    	<td>{{$section->video_video_id}}</td>
 						    	<td>{{$section->materi_materi_id}}</td>
 						    	<td>{{$section->soal_soal_id}}</td>

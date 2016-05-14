@@ -13,7 +13,7 @@ class UserController extends Controller
     public function login(){
         // dd(Input::all());
     	if(Auth::attempt(['username' => Input::get('username'), 'password' => Input::get('password')])){
-    		return redirect('user');
+    		return redirect('courseuser');
     	}
     	return redirect()->back();
     }
@@ -32,6 +32,7 @@ class UserController extends Controller
         if(Request::isMethod('get')){
             $share = array();
             $share['roles'] = Role::get();
+            // dd($share['roles']);
             return view('pages.user.create', $share);
         }else if(Request::isMethod('post')){
             $user = User::create(Input::all());

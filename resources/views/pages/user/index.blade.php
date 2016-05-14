@@ -28,7 +28,7 @@
 						    	<td>{{$user->user_id}}</td>
 						    	<td>{{$user->username}}</td>
 						    	<td>{{$user->password}}</td>
-						    	<td>{{$user->role_role_id}}</td>
+						    	<td>{{$user->role->rolename}}</td>
 						    	<td>
 						    		<a href="{{ URL::to('user/update/' . $user->user_id) }}" class="btn btn-primary btn-xs"title="Sunting"><span class="glyphicon glyphicon-pencil"></span></a>
                                     <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal{{$user->user_id}}"><span class="glyphicon glyphicon-remove"></span></button>

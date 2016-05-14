@@ -17,14 +17,14 @@ class User extends Model implements Authenticatable
     ];
 
     public function role(){
-    	return $this->belongTo('App/Role','role_role_id','role_id');
-    }
-
-    public function course(){
-        return $this->belongsToMany('App/Course','');
+    	return $this->belongsTo('App\Role','role_role_id','role_id');
     }
 
     public function section(){
         return $this->belongsToMany('App\Section','finished_sections','user_user_id','section_section_id');
+    }
+
+    public function isAdmin(){
+        return $this->role_role_id == 1;
     }
 }
