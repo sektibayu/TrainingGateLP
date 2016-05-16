@@ -1,14 +1,15 @@
-@extends('layout.master')
-
-@section('title','')
+@extends('layout.master-user')
 
 @section('content')
+	<div class="row">
+            <ol class="breadcrumb">
+                <li><a href="{{ URL::to('courseuser') }}"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
+                <li class="active">Course</li>
+                <li class="active">{{ $course->nama_course }}</li>
+            </ol>
+        </div><!--/.row-->
+        <br>   
     <div class="row">
-        <div class="col-lg-12">
-            <h1>{{ $course->nama_course }}</h1>
-        </div>
-        <div class="col-lg-12">
-        {{ $course->deskripsi_course }}
         <div class="col-md-12">
 				<div class="panel panel-default">
 					<div class="panel-body tabs">
@@ -32,15 +33,14 @@
 							@endif
 								<h4>Tab {{$i++}}</h4>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget rutrum purus. Donec hendrerit ante ac metus sagittis elementum. Mauris feugiat nisl sit amet neque luctus, a tincidunt odio auctor. </p>
-								<a href="{{ URL::to('course/create') }}" class="btn btn-primary" title="Tambah"> Materi </a>
-								<a href="{{ URL::to('course/create') }}" class="btn btn-primary" title="Tambah"> Video </a>
-								<a href="{{ URL::to('course/create') }}" class="btn btn-primary" title="Tambah"> Soal </a>
+								<a href="{{ URL::to('courseuser/detail/'.$course->course_id.'/'.$section->section_id.'/materi') }}" class="btn btn-primary" title="Materi"> Materi </a>
+								<a href="{{ URL::to('courseuser/detail/'.$course->course_id.'/'.$section->section_id.'/video') }}" class="btn btn-primary" title="Video"> Video </a>
+								<a href="{{ URL::to('courseuser/detail/'.$course->course_id.'/'.$section->section_id.'/materi') }}" class="btn btn-primary" title="Soal" disabled> Soal </a>
 							</div>
 							@endforeach
 						</div>
 					</div>
 				</div><!--/.panel-->
 			</div><!--/.col-->
-        </div>
     </div><!--/.row-->         
 @endsection

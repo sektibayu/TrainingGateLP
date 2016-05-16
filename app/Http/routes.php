@@ -28,17 +28,27 @@ Route::group(['middleware' => ['web']], function(){
 		 'as' => 'logout'
 		 ));
 	Route::group(['middleware' => ['auth']], function(){
+
 		Route::get('courseuser', array(
 		'uses' => 'CourseUserController@index'
 		));
-
 		Route::get('courseuser/detail/{id}', array(
 			'uses' => 'CourseUserController@detail'
 			));
-
+		Route::get('courseuser/detail/{id}/{sid}/video', array(
+			'uses' => 'CourseUserController@video'
+			));
+		Route::get('courseuser/detail/{id}/{sid}/materi', array(
+			'uses' => 'CourseUserController@materi'
+			));
+		Route::get('courseuser/detail/{id}/{sid}/soal', array(
+			'uses' => 'CourseUserController@soal'
+			));
+		
 		Route::get('bundle', array(
 			'uses' => 'BundleController@index'
 			));
+
 		Route::group(['middleware' => ['role']], function(){
 			Route::get('user', array(
 				'uses' => 'UserController@index'

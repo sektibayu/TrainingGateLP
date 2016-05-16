@@ -15,7 +15,7 @@
 						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p> -->
 						{{ $course->deskripsi_course }}
 						<br>
-						<a href="{{ URL::to('courseuser/detail/'.$course->course_id) }}" class="btn btn-primary" title="Tambah"> Go to Course</a>
+						<a href="{{ URL::to('courseuser/detail/'.$course->course_id) }}" class="btn btn-primary" title="{{'Course '.($i-1)}}"> Go to Course</a>
 					</div>
 				</div>
 			</div>

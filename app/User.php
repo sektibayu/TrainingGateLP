@@ -27,4 +27,5 @@ class User extends Model implements Authenticatable
     public function isAdmin(){
         return $this->role_role_id == 1;
     }
+
 }
