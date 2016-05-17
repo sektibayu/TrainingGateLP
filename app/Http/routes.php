@@ -28,6 +28,9 @@ Route::group(['middleware' => ['web']], function(){
 		 'as' => 'logout'
 		 ));
 	Route::group(['middleware' => ['auth']], function(){
+		Route::get('profil', array(
+		'uses' => 'ProfilController@index'
+		));
 
 		Route::get('courseuser', array(
 		'uses' => 'CourseUserController@index'
@@ -154,6 +157,7 @@ Route::group(['middleware' => ['web']], function(){
 			Route::get('section/delete/{id}', array(
 				'uses'=>'SectionController@delete'
 				));
+
 		});
 	});
 });
